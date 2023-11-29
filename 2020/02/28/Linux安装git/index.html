@@ -1,0 +1,260 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>为了博客也是操碎了心（Linux 下 配置 git ） | CHUYUXUAN</title><meta name="author" content="chuyuxuan"><meta name="copyright" content="chuyuxuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="起因诚然,我的博客采用的是hexo farmework，依托于gitpage而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？哈哈哈，蛮不错的。结果一查相关资料，顿时有点懵。  我买了域名，但是gitpage依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用chuyuxuan.xyz来访问我的博客。  而假如我想用国内的CDN加速我的资源，我的域名就必须要备">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为了博客也是操碎了心（Linux 下 配置 git ）">
+<meta property="og:url" content="https://blognew.chuyuxuan.top/2020/02/28/Linux%E5%AE%89%E8%A3%85git/index.html">
+<meta property="og:site_name" content="CHUYUXUAN">
+<meta property="og:description" content="起因诚然,我的博客采用的是hexo farmework，依托于gitpage而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？哈哈哈，蛮不错的。结果一查相关资料，顿时有点懵。  我买了域名，但是gitpage依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用chuyuxuan.xyz来访问我的博客。  而假如我想用国内的CDN加速我的资源，我的域名就必须要备">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/linux/linux_cover.jpg">
+<meta property="article:published_time" content="2020-02-28T10:49:35.000Z">
+<meta property="article:modified_time" content="2023-08-01T14:03:23.989Z">
+<meta property="article:author" content="chuyuxuan">
+<meta property="article:tag" content="Linux">
+<meta property="article:tag" content="centOS">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/linux/linux_cover.jpg"><link rel="shortcut icon" href="/img/favicon1.ico"><link rel="canonical" href="https://blognew.chuyuxuan.top/2020/02/28/Linux%E5%AE%89%E8%A3%85git/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?66e8bfee2641f792cfb4b22b2cf76e0e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '为了博客也是操碎了心（Linux 下 配置 git ）',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-01 22:03:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="CHUYUXUAN"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">为了博客也是操碎了心（Linux 下 配置 git ）</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-02-28T10:49:35.000Z" title="发表于 2020-02-28 18:49:35">2020-02-28</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-01T14:03:23.989Z" title="更新于 2023-08-01 22:03:23">2023-08-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="为了博客也是操碎了心（Linux 下 配置 git ）"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h1 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h1><p>诚然,我的博客采用的是<code>hexo farmework</code>，依托于<code>gitpage</code>而搭建的，对于国内的我来说很不友好。😖于是我在想啊，要不用CND加速？<strong>哈哈哈，蛮不错的</strong>。结果一查相关资料，顿时有点懵。</p>
+<ul>
+<li><p>我买了域名，但是<code>gitpage</code>依赖于GitHub，是属于国外的服务器的，所以我并不需要备案就可以用<a target="_blank" rel="noopener" href="https://chuyuxuan.xyz/">chuyuxuan.xyz</a>来访问我的博客。</p>
+</li>
+<li><p>而假如我想用国内的CDN加速我的资源，我的域名就必须要备案。备案你就得必须要有服务器。<br><img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/005.gif"></p>
+</li>
+</ul>
+<p>好了，扯的有点远了，总之，能用技术解决的事情尽量用技术去解决。所以了了适应云主机，这里便采用虚拟机模拟了一个本地的服务器，为自己把博客部署到云端做准备。</p>
+<h1 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h1><div class="note success flat"><ol>
+<li>VMware Workstation <a target="_blank" rel="noopener" href="https://my.vmware.com/en/web/vmware/info/slug/desktop_end_user_computing/vmware_workstation_pro/15_0?wd=&eqid=9718f2bc000e9110000000065e58f46d">点击下载</a></li>
+<li>CentOS ISO <a target="_blank" rel="noopener" href="https://mirrors.aliyun.com/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1908.iso">点击下载</a></li>
+</ol>
+<p><em>当然，可以自己百度搜索相关资源</em></p>
+</div>
+
+<h1 id="安装-VMware-和-建立centOS虚拟机"><a href="#安装-VMware-和-建立centOS虚拟机" class="headerlink" title="安装 VMware 和 建立centOS虚拟机"></a>安装 <code>VMware</code> 和 建立<code>centOS</code>虚拟机</h1><p>这里我就不再演示了，是个人就会安装，实在不会百度。<br><img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/097.gif"></p>
+<h1 id="git服务端安装"><a href="#git服务端安装" class="headerlink" title="git服务端安装"></a>git服务端安装</h1><h2 id="从yum安装git"><a href="#从yum安装git" class="headerlink" title="从yum安装git"></a>从<code>yum</code>安装git</h2><pre><code>yum install git-core
+</code></pre>
+<h2 id="在需要的位置创建一个裸仓库"><a href="#在需要的位置创建一个裸仓库" class="headerlink" title="在需要的位置创建一个裸仓库"></a>在需要的位置创建一个裸仓库</h2><pre><code>cd /usr/local 
+mkdir git
+cd git
+git init --bare demo.git
+</code></pre>
+<h2 id="创建一个git用户并赋予密码"><a href="#创建一个git用户并赋予密码" class="headerlink" title="创建一个git用户并赋予密码"></a>创建一个git用户并赋予密码</h2><pre><code>useradd git
+passwd git//输入密码大于8位，用于push和clone
+</code></pre>
+<h2 id="赋予git用户权限"><a href="#赋予git用户权限" class="headerlink" title="赋予git用户权限"></a>赋予git用户权限</h2><p><code>chown</code>将指定文件的拥有者改为指定的用户或组，用户可以是用户名或者用户ID；组可以是组名或者组ID；文件是以空格分开的要改变权限的文件列表，支持通配符。系统管理员经常使用chown命令，在将文件拷贝到另一个用户的名录下之后，让用户拥有使用该文件的权限。</p>
+<pre><code>chown -R git:git demo.git //把权限赋给名字为git的用户
+</code></pre>
+<h2 id="禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）"><a href="#禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）" class="headerlink" title="禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）"></a>禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）</h2><pre><code>vim /etc/passwd
+//找到最后一行（一般都是的）
+// 敲 “i” 进行编辑
+git:x:1000:1000::/home/git:/usr/bin/git-shell
+//改成上面格式之后esc然后敲“：wq!”保存并退出
+</code></pre>
+<p><strong>恭喜!服务端配置基本完成，接下来是客户端了。</strong></p>
+<h1 id="git客户端安装"><a href="#git客户端安装" class="headerlink" title="git客户端安装"></a>git客户端安装</h1><p><strong>这里百度去吧，很简单的，我采用的是window下的git服务，就直接下一步好了，这里给出下载地址：</strong><a target="_blank" rel="noopener" href="https://git-scm.com/downloads">点击下载</a></p>
+<h2 id="创建客户端用户"><a href="#创建客户端用户" class="headerlink" title="创建客户端用户"></a>创建客户端用户</h2><p>安装好后桌面右键，<code>git Bush here</code>就可以进入shell.</p>
+<pre><code>git config --global user.name &quot;你的名字&quot;
+git config --global user.email &quot;你的邮箱&quot;
+</code></pre>
+<h2 id="创建密钥ssh-不嫌麻烦的话可以不用配置"><a href="#创建密钥ssh-不嫌麻烦的话可以不用配置" class="headerlink" title="创建密钥ssh(不嫌麻烦的话可以不用配置)"></a>创建密钥ssh(不嫌麻烦的话可以不用配置)</h2><pre><code>ssh-keygen -t rsa -C &quot;你的邮箱&quot;
+</code></pre>
+<p>然后<strong>一直回车</strong>，直到完毕。</p>
+<h2 id="将公钥加入服务器列表"><a href="#将公钥加入服务器列表" class="headerlink" title="将公钥加入服务器列表"></a>将公钥加入服务器列表</h2><h3 id="取得本地ssh公钥"><a href="#取得本地ssh公钥" class="headerlink" title="取得本地ssh公钥"></a>取得本地ssh公钥</h3><pre><code>cd ~/.ssh
+cat id_rsa.pub 
+</code></pre>
+<p>复制，内容大概如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ssh-rsafdjslafhs;jgjieghegoghskf+fdhsjaklghj</span><br><span class="line">fsahjgjrl;agjkfl;dafjsighiroghuerhgkfdvrreui</span><br><span class="line">fhgrjegreoughuighuitglsghruighirhgbibvifrggg</span><br><span class="line">grhuipaghuireghergerpreofjeiwfhfuhbjzb+0frhf</span><br><span class="line">fshgheagwgegw======你的邮箱</span><br></pre></td></tr></table></figure>
+<h3 id="添加到服务端"><a href="#添加到服务端" class="headerlink" title="添加到服务端"></a>添加到服务端</h3><p>默认列表在&#x2F;root&#x2F;.ssh&#x2F;authorized_keys，使用vim 编辑此文件输入刚才复制的内容，保存退出。</p>
+<pre><code>vi /root/.ssh/authorized_keys
+//i修改
+//esc后输入:wq保存退出
+</code></pre>
+<h1 id="克隆远程项目到本地"><a href="#克隆远程项目到本地" class="headerlink" title="克隆远程项目到本地"></a>克隆远程项目到本地</h1><p>在自己的电脑上随便找个位置，<code>git Bush here</code>，</p>
+<pre><code>git clone git@‘你服务器的IP地址’:/usr/local/git/demogit.git
+
+//例如： git clone git@111.111.111.111:/usr/local/git/demo.git
+</code></pre>
+<h1 id="至此，over。"><a href="#至此，over。" class="headerlink" title="至此，over。"></a>至此，over。</h1><p>当然，你可以push你自己的代码到服务器上，比方说把<code>hexo</code>静态博客push上去，实现本地访问。</p>
+<h1 id="感慨"><a href="#感慨" class="headerlink" title="感慨"></a>感慨</h1><p>花了我很久时间，大部分时间我在做无用功。。怪自己自学太慢了。<br><img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/087.gif"></p>
+<p>我在想自己还到底要不要用CDN加速哦。。。难搞难搞。。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top">chuyuxuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top/2020/02/28/Linux%E5%AE%89%E8%A3%85git/">https://blognew.chuyuxuan.top/2020/02/28/Linux安装git/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blognew.chuyuxuan.top" target="_blank">CHUYUXUAN</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/Linux/">Linux</a><a class="post-meta__tags" href="/tags/centOS/">centOS</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/chuyuxuan/tuc/raw/master/linux/linux_cover.jpg" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/03/01/%E6%A6%82%E7%8E%87%E8%AE%BA%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/" title="概率论知识点总结"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/gai_lv_lun/cover.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">概率论知识点总结</div></div></a></div><div class="next-post pull-right"><a href="/2020/02/25/%E4%BD%9C%E4%B8%9A3/" title="计算机图形学作业3"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/zuoye.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">计算机图形学作业3</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/05/15/linux%E9%83%A8%E7%BD%B2nginx/" title="Linux 安装 nginx"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/linux/122.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-05-15</div><div class="title">Linux 安装 nginx</div></div></a></div><div><a href="/2020/09/06/shell%E5%9F%BA%E6%9C%AC/" title="Linux Bash Shell Base"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/linux/bush.jpg" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-09-06</div><div class="title">Linux Bash Shell Base</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">chuyuxuan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%B5%B7%E5%9B%A0"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">准备</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%AE%89%E8%A3%85-VMware-%E5%92%8C-%E5%BB%BA%E7%AB%8BcentOS%E8%99%9A%E6%8B%9F%E6%9C%BA"><span class="toc-number">3.</span> <span class="toc-text">安装 VMware 和 建立centOS虚拟机</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%AE%89%E8%A3%85"><span class="toc-number">4.</span> <span class="toc-text">git服务端安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8Eyum%E5%AE%89%E8%A3%85git"><span class="toc-number">4.1.</span> <span class="toc-text">从yum安装git</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9C%A8%E9%9C%80%E8%A6%81%E7%9A%84%E4%BD%8D%E7%BD%AE%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E8%A3%B8%E4%BB%93%E5%BA%93"><span class="toc-number">4.2.</span> <span class="toc-text">在需要的位置创建一个裸仓库</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AAgit%E7%94%A8%E6%88%B7%E5%B9%B6%E8%B5%8B%E4%BA%88%E5%AF%86%E7%A0%81"><span class="toc-number">4.3.</span> <span class="toc-text">创建一个git用户并赋予密码</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%8B%E4%BA%88git%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90"><span class="toc-number">4.4.</span> <span class="toc-text">赋予git用户权限</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%A6%81%E7%94%A8git%E7%94%A8%E6%88%B7shell%E7%99%BB%E5%BD%95%EF%BC%88%E4%B8%BA%E4%BA%86%E5%AE%89%E5%85%A8%EF%BC%8C%E8%99%BD%E7%84%B6%E6%88%91%E6%98%AF%E5%9C%A8%E6%9C%AC%E5%9C%B0%E8%99%9A%E6%8B%9F%E6%9C%BA%E4%B8%8A%E8%B7%91%EF%BC%89"><span class="toc-number">4.5.</span> <span class="toc-text">禁用git用户shell登录（为了安全，虽然我是在本地虚拟机上跑）</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#git%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85"><span class="toc-number">5.</span> <span class="toc-text">git客户端安装</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AE%A2%E6%88%B7%E7%AB%AF%E7%94%A8%E6%88%B7"><span class="toc-number">5.1.</span> <span class="toc-text">创建客户端用户</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9B%E5%BB%BA%E5%AF%86%E9%92%A5ssh-%E4%B8%8D%E5%AB%8C%E9%BA%BB%E7%83%A6%E7%9A%84%E8%AF%9D%E5%8F%AF%E4%BB%A5%E4%B8%8D%E7%94%A8%E9%85%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text">创建密钥ssh(不嫌麻烦的话可以不用配置)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%86%E5%85%AC%E9%92%A5%E5%8A%A0%E5%85%A5%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%88%97%E8%A1%A8"><span class="toc-number">5.3.</span> <span class="toc-text">将公钥加入服务器列表</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8F%96%E5%BE%97%E6%9C%AC%E5%9C%B0ssh%E5%85%AC%E9%92%A5"><span class="toc-number">5.3.1.</span> <span class="toc-text">取得本地ssh公钥</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-number">5.3.2.</span> <span class="toc-text">添加到服务端</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%8B%E9%9A%86%E8%BF%9C%E7%A8%8B%E9%A1%B9%E7%9B%AE%E5%88%B0%E6%9C%AC%E5%9C%B0"><span class="toc-number">6.</span> <span class="toc-text">克隆远程项目到本地</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E8%87%B3%E6%AD%A4%EF%BC%8Cover%E3%80%82"><span class="toc-number">7.</span> <span class="toc-text">至此，over。</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%84%9F%E6%85%A8"><span class="toc-number">8.</span> <span class="toc-text">感慨</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty"><img src="https://s2.loli.net/2023/08/06/Np49USqBcGLwefH.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码阅读-Object.defineProperty"/></a><div class="content"><a class="title" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty">vue源码阅读-Object.defineProperty</a><time datetime="2023-08-06T07:10:58.000Z" title="发表于 2023-08-06 15:10:58">2023-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG"><img src="https://s2.loli.net/2023/06/21/FouatOY6wW7sfI9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何优雅的甩锅BUG"/></a><div class="content"><a class="title" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG">如何优雅的甩锅BUG</a><time datetime="2023-06-21T01:46:59.000Z" title="发表于 2023-06-21 09:46:59">2023-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/06/11/" title="如何拿到选项的label">如何拿到选项的label</a><time datetime="2023-03-06T11:15:29.000Z" title="发表于 2023-03-06 19:15:29">2023-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网"><img src="https://s2.loli.net/2022/11/01/XurvGZ2QkBUIWmY.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win设置同时链接内外网"/></a><div class="content"><a class="title" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网">win设置同时链接内外网</a><time datetime="2022-11-01T04:03:29.000Z" title="发表于 2022-11-01 12:03:29">2022-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?"><img src="https://s2.loli.net/2022/10/09/rvQuakSAYZ2b9Wg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="尝试配置一下简单的webpack?"/></a><div class="content"><a class="title" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?">尝试配置一下简单的webpack?</a><time datetime="2022-10-09T13:50:31.000Z" title="发表于 2022-10-09 21:50:31">2022-10-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By CHUYUXUAN</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>Design By </span><a href="https://blognew.chuyuxuan.top">CHUYUXUAN</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+      appKey: 't4eW4wzuDJuIU1McV0Ir9Dzq',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

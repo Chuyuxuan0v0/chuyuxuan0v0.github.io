@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CSS选择器 | CHUYUXUAN</title><meta name="author" content="chuyuxuan"><meta name="copyright" content="chuyuxuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="说实话，如果不是复习，我原来还有这么多没有记住  选择器的分组Id选择器 HTML元素以id属性来设置id选择器,CSS 中 id 选择器以&quot;#&quot;来定义。  123456&#x2F;* id&#x3D;&quot;para1&quot;:  *&#x2F;#para1&amp;#123;    text-align:center;    color:red;&amp;#125; 注意：ID属性不要以数字开头，数字开头的ID">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS选择器">
+<meta property="og:url" content="https://blognew.chuyuxuan.top/2020/02/10/CSS%E9%80%89%E6%8B%A9%E5%99%A8/index.html">
+<meta property="og:site_name" content="CHUYUXUAN">
+<meta property="og:description" content="说实话，如果不是复习，我原来还有这么多没有记住  选择器的分组Id选择器 HTML元素以id属性来设置id选择器,CSS 中 id 选择器以&quot;#&quot;来定义。  123456&#x2F;* id&#x3D;&quot;para1&quot;:  *&#x2F;#para1&amp;#123;    text-align:center;    color:red;&amp;#125; 注意：ID属性不要以数字开头，数字开头的ID">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png">
+<meta property="article:published_time" content="2020-02-10T09:49:35.000Z">
+<meta property="article:modified_time" content="2023-08-01T14:03:23.989Z">
+<meta property="article:author" content="chuyuxuan">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="selector">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png"><link rel="shortcut icon" href="/img/favicon1.ico"><link rel="canonical" href="https://blognew.chuyuxuan.top/2020/02/10/CSS%E9%80%89%E6%8B%A9%E5%99%A8/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?66e8bfee2641f792cfb4b22b2cf76e0e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CSS选择器',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-01 22:03:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="CHUYUXUAN"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">CSS选择器</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2020-02-10T09:49:35.000Z" title="发表于 2020-02-10 17:49:35">2020-02-10</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-01T14:03:23.989Z" title="更新于 2023-08-01 22:03:23">2023-08-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CSS选择器"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p><strong>说实话，如果不是复习，我原来还有这么多没有记住</strong></p>
+<p><img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/060.gif"></p>
+<h2 id="选择器的分组"><a href="#选择器的分组" class="headerlink" title="选择器的分组"></a>选择器的分组</h2><h3 id="Id选择器"><a href="#Id选择器" class="headerlink" title="Id选择器"></a>Id选择器</h3><ul>
+<li>HTML元素以id属性来设置id选择器,CSS 中 id 选择器以<code>&quot;#&quot;</code>来定义。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* id=&quot;para1&quot;:  */</span></span><br><span class="line"><span class="selector-id">#para1</span></span><br><span class="line">&#123;</span><br><span class="line">    <span class="attribute">text-align</span>:center;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><code>注意</code>：<strong>ID属性不要以数字开头，数字开头的ID在 Mozilla&#x2F;Firefox 浏览器中不起作用。</strong></p>
+<h3 id="Class选择器"><a href="#Class选择器" class="headerlink" title="Class选择器"></a>Class选择器</h3><ul>
+<li>在 CSS 中，类选择器以一个点<code>&quot;.&quot;</code>号显示。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 所有拥有 center 类的 HTML 元素均为居中。 */</span></span><br><span class="line"><span class="selector-class">.center</span> &#123;<span class="attribute">text-align</span>:center;&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 所有的 p 元素使用 class=&quot;center&quot; 让该元素的文本居中 */</span></span><br><span class="line"><span class="selector-tag">p</span><span class="selector-class">.center</span> &#123;<span class="attribute">text-align</span>:center;&#125;</span><br></pre></td></tr></table></figure>
+<code>注意</code>：<strong>同样，class属性不要以数字开头，数字开头的class在 Mozilla&#x2F;Firefox 浏览器中不起作用。</strong></li>
+</ul>
+<h3 id="标签选择器"><a href="#标签选择器" class="headerlink" title="标签选择器"></a>标签选择器</h3><ul>
+<li>以 html 标签作为 css 修饰所用的选择器。<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-tag">h3</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">h3</span>&gt;chuyuxuan&lt;/<span class="selector-tag">h3</span>&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="包含选择器"><a href="#包含选择器" class="headerlink" title="包含选择器"></a>包含选择器</h3><ul>
+<li>指定目标选择器必须处在某个选择器对应的元素内部，<br>语法格式：<br><code>A B&#123;...&#125;</code>（A、B为HTML元素&#x2F;标签，表示对处于A中的B标签有效）。</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">以下<span class="selector-tag">div</span>内的<span class="selector-tag">p</span>标签和<span class="selector-tag">div</span>外的<span class="selector-tag">p</span>标签分别匹配不同的样式</span><br><span class="line"></span><br><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">div</span> <span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:yellow;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span>&gt;red text&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是红色的--&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">p</span>&gt;yellow text&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是黄色的--&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="子选择器"><a href="#子选择器" class="headerlink" title="子选择器"></a>子选择器</h3><ul>
+<li>类似于PS，指定目标选择器必须处在某个选择器对应的元素内部，两者区别在于PS允许<code>&quot;子标签&quot;</code>甚至<code>&quot;孙子标签&quot;</code>及嵌套更深的标签匹配相应的样式，而SS强制指定目标选择器作为 包含选择器对应的标签 内部的标签，语法格式：<br><code>A&gt;B&#123;...&#125;</code>（A、B为HTML元素&#x2F;标签,A是类名，B是标签）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">以下<span class="selector-tag">div</span>内的<span class="selector-tag">p</span>标签匹配样式，<span class="selector-tag">div</span>内的<span class="selector-tag">table</span>内的<span class="selector-tag">p</span>不匹配</span><br><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-tag">div</span>&gt;<span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">p</span>&gt;red text&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是红色的--&gt;</span><br><span class="line">  &lt;<span class="selector-tag">table</span>&gt;</span><br><span class="line">    &lt;<span class="selector-tag">tr</span>&gt;</span><br><span class="line">      &lt;<span class="selector-tag">td</span>&gt;</span><br><span class="line">        &lt;<span class="selector-tag">p</span>&gt;no red text;&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是非红色的--&gt;</span><br><span class="line">      &lt;/<span class="selector-tag">td</span>&gt;</span><br><span class="line">    &lt;/<span class="selector-tag">tr</span>&gt;</span><br><span class="line">  &lt;/<span class="selector-tag">table</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="兄弟选择器（brother-selector，BS）"><a href="#兄弟选择器（brother-selector，BS）" class="headerlink" title="兄弟选择器（brother selector，BS）"></a>兄弟选择器（brother selector，BS）</h3><ul>
+<li>BS是CSS3.0新增的一个选择器，语法格式：<br><code>A~B&#123;...&#125;</code> （A、B为HTML元素&#x2F;标签，表示A标签匹配selector的A，B标签匹配selector的B时，B标签匹配样式）<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;style&gt;</span><br><span class="line"><span class="selector-tag">div</span>~<span class="selector-tag">p</span>&#123;</span><br><span class="line">  <span class="attribute">color</span>:red;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">p</span>&gt;no red text&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是非红色的--&gt;</span><br><span class="line">  &lt;<span class="selector-tag">div</span>&gt;no red text&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">  &lt;<span class="selector-tag">p</span>&gt;red text&lt;/<span class="selector-tag">p</span>&gt;&lt;!--文字是红色的--&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="相邻选择器"><a href="#相邻选择器" class="headerlink" title="相邻选择器"></a>相邻选择器</h3><p>语法形式为：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">A</span>+<span class="selector-tag">B</span>&#123;</span><br><span class="line">    声明<span class="number">1</span>;</span><br><span class="line">    声明;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>实例:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--相邻选择器选择每个<span class="selector-tag">div</span>紧邻后的一个元素<span class="selector-tag">p</span>--&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">   <span class="selector-tag">div</span>+<span class="selector-tag">p</span>&#123;</span><br><span class="line">     <span class="attribute">color</span>: red;</span><br><span class="line">   &#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;<span class="selector-tag">div</span>&gt;</span><br><span class="line">   &lt;<span class="selector-tag">p</span>&gt;not red text&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">   &lt;<span class="selector-tag">p</span>&gt;not red text&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;/<span class="selector-tag">div</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span>&gt;red text&lt;/<span class="selector-tag">p</span>&gt;</span><br><span class="line">&lt;<span class="selector-tag">p</span>&gt;not red text&lt;/<span class="selector-tag">p</span>&gt;</span><br></pre></td></tr></table></figure>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top">chuyuxuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top/2020/02/10/CSS%E9%80%89%E6%8B%A9%E5%99%A8/">https://blognew.chuyuxuan.top/2020/02/10/CSS选择器/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blognew.chuyuxuan.top" target="_blank">CHUYUXUAN</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/CSS/">CSS</a><a class="post-meta__tags" href="/tags/selector/">selector</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2020/02/11/CSS-text%E5%B1%9E%E6%80%A7/" title="CSS-Text相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CSS-Text相关</div></div></a></div><div class="next-post pull-right"><a href="/2020/02/10/CSS-Background/" title="CSS背景相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">CSS背景相关</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/02/10/CSS-Background/" title="CSS背景相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-10</div><div class="title">CSS背景相关</div></div></a></div><div><a href="/2020/02/11/CSS-link/" title="CSS链接相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS链接相关</div></div></a></div><div><a href="/2020/02/11/CSS-list%E7%9B%B8%E5%85%B3/" title="CSS-list相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS-list相关</div></div></a></div><div><a href="/2020/02/11/CSS-text%E5%B1%9E%E6%80%A7/" title="CSS-Text相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS-Text相关</div></div></a></div><div><a href="/2021/12/21/%E5%85%A8%E7%AD%89%E5%92%8C%E7%9B%B8%E7%AD%89%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%98%9B/" title="js相等和全等你真的了解嘛"><img class="cover" src="https://s2.loli.net/2021/12/21/BK1FH9zCGpfdvNU.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-21</div><div class="title">js相等和全等你真的了解嘛</div></div></a></div><div><a href="/2021/08/31/%E5%B0%86%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E5%AE%89%E5%8D%93APP%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/" title="将网页封装安卓APP的几种方法"><img class="cover" src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210831094926.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-08-31</div><div class="title">将网页封装安卓APP的几种方法</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">chuyuxuan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%80%89%E6%8B%A9%E5%99%A8%E7%9A%84%E5%88%86%E7%BB%84"><span class="toc-number">1.</span> <span class="toc-text">选择器的分组</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Id%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.1.</span> <span class="toc-text">Id选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Class%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.2.</span> <span class="toc-text">Class选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%87%E7%AD%BE%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.3.</span> <span class="toc-text">标签选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8C%85%E5%90%AB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.4.</span> <span class="toc-text">包含选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AD%90%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.5.</span> <span class="toc-text">子选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%84%E5%BC%9F%E9%80%89%E6%8B%A9%E5%99%A8%EF%BC%88brother-selector%EF%BC%8CBS%EF%BC%89"><span class="toc-number">1.6.</span> <span class="toc-text">兄弟选择器（brother selector，BS）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%9B%B8%E9%82%BB%E9%80%89%E6%8B%A9%E5%99%A8"><span class="toc-number">1.7.</span> <span class="toc-text">相邻选择器</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty"><img src="https://s2.loli.net/2023/08/06/Np49USqBcGLwefH.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码阅读-Object.defineProperty"/></a><div class="content"><a class="title" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty">vue源码阅读-Object.defineProperty</a><time datetime="2023-08-06T07:10:58.000Z" title="发表于 2023-08-06 15:10:58">2023-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG"><img src="https://s2.loli.net/2023/06/21/FouatOY6wW7sfI9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何优雅的甩锅BUG"/></a><div class="content"><a class="title" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG">如何优雅的甩锅BUG</a><time datetime="2023-06-21T01:46:59.000Z" title="发表于 2023-06-21 09:46:59">2023-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/06/11/" title="如何拿到选项的label">如何拿到选项的label</a><time datetime="2023-03-06T11:15:29.000Z" title="发表于 2023-03-06 19:15:29">2023-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网"><img src="https://s2.loli.net/2022/11/01/XurvGZ2QkBUIWmY.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win设置同时链接内外网"/></a><div class="content"><a class="title" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网">win设置同时链接内外网</a><time datetime="2022-11-01T04:03:29.000Z" title="发表于 2022-11-01 12:03:29">2022-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?"><img src="https://s2.loli.net/2022/10/09/rvQuakSAYZ2b9Wg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="尝试配置一下简单的webpack?"/></a><div class="content"><a class="title" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?">尝试配置一下简单的webpack?</a><time datetime="2022-10-09T13:50:31.000Z" title="发表于 2022-10-09 21:50:31">2022-10-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By CHUYUXUAN</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>Design By </span><a href="https://blognew.chuyuxuan.top">CHUYUXUAN</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+      appKey: 't4eW4wzuDJuIU1McV0Ir9Dzq',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>将网页封装安卓APP的几种方法 | CHUYUXUAN</title><meta name="author" content="chuyuxuan"><meta name="copyright" content="chuyuxuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="将网站封装成APP安卓应用我接触到的目前有三种方法，构建方法和难度也是逐步提升，不过，世上无难事，只怕有心人，干就完了，奥里给！ 法一：利用一个木函封装讲真，这个方法是我目前接触到最快，最省力，而且最高效的做法，速度起飞，快的一批~~ 1.1 手机应用商店搜索一个木函应用。  1.2  找到下载并安装。    1.3  打开，依次 全部应用&gt;&gt;网页转应用。1.4  填写好相关信息。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="将网页封装安卓APP的几种方法">
+<meta property="og:url" content="https://blognew.chuyuxuan.top/2021/08/31/%E5%B0%86%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E5%AE%89%E5%8D%93APP%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html">
+<meta property="og:site_name" content="CHUYUXUAN">
+<meta property="og:description" content="将网站封装成APP安卓应用我接触到的目前有三种方法，构建方法和难度也是逐步提升，不过，世上无难事，只怕有心人，干就完了，奥里给！ 法一：利用一个木函封装讲真，这个方法是我目前接触到最快，最省力，而且最高效的做法，速度起飞，快的一批~~ 1.1 手机应用商店搜索一个木函应用。  1.2  找到下载并安装。    1.3  打开，依次 全部应用&gt;&gt;网页转应用。1.4  填写好相关信息。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/Chuyuxuan/tuc/raw/master/20210831094926.png">
+<meta property="article:published_time" content="2021-08-31T01:29:49.000Z">
+<meta property="article:modified_time" content="2023-08-01T14:03:23.995Z">
+<meta property="article:author" content="chuyuxuan">
+<meta property="article:tag" content="前端">
+<meta property="article:tag" content="Android">
+<meta property="article:tag" content="WebView">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/Chuyuxuan/tuc/raw/master/20210831094926.png"><link rel="shortcut icon" href="/img/favicon1.ico"><link rel="canonical" href="https://blognew.chuyuxuan.top/2021/08/31/%E5%B0%86%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E5%AE%89%E5%8D%93APP%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?66e8bfee2641f792cfb4b22b2cf76e0e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '将网页封装安卓APP的几种方法',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-08-01 22:03:23'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="CHUYUXUAN"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">将网页封装安卓APP的几种方法</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2021-08-31T01:29:49.000Z" title="发表于 2021-08-31 09:29:49">2021-08-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-08-01T14:03:23.995Z" title="更新于 2023-08-01 22:03:23">2023-08-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="将网页封装安卓APP的几种方法"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><p>将网站封装成APP安卓应用我接触到的目前有三种方法，构建方法和难度也是逐步提升，不过，世上无难事，只怕有心人，干就完了，奥里给！<img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/166.gif" style="zoom:67%;" /></p>
+<h3 id="法一：利用一个木函封装"><a href="#法一：利用一个木函封装" class="headerlink" title="法一：利用一个木函封装"></a>法一：利用<code>一个木函</code>封装</h3><p>讲真，这个方法是我目前接触到<strong>最快</strong>，<strong>最省力</strong>，而且<strong>最高效</strong>的做法，速度起飞，快的一批~~<img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/149.gif" style="zoom:67%;" /></p>
+<h4 id="1-1-手机应用商店搜索一个木函应用。"><a href="#1-1-手机应用商店搜索一个木函应用。" class="headerlink" title="1.1 手机应用商店搜索一个木函应用。"></a>1.1 <strong>手机应用商店搜索<code>一个木函</code>应用。</strong></h4><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826100217.png" style="zoom:70%;" />
+
+<h4 id="1-2-找到下载并安装。"><a href="#1-2-找到下载并安装。" class="headerlink" title="1.2  找到下载并安装。"></a>1.2  找到下载并安装。</h4><img src="https://i.loli.net/2021/08/26/bVRHL28YOrM7cjB.gif" style="zoom:70%;" />
+
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826100218.png" style="zoom:70%;" />
+
+<h4 id="1-3-打开，依次-全部应用-gt-gt-网页转应用。"><a href="#1-3-打开，依次-全部应用-gt-gt-网页转应用。" class="headerlink" title="1.3  打开，依次 全部应用&gt;&gt;网页转应用。"></a>1.3  打开，依次 <strong>全部应用</strong>&gt;&gt;<strong>网页转应用</strong>。</h4><h4 id="1-4-填写好相关信息。"><a href="#1-4-填写好相关信息。" class="headerlink" title="1.4  填写好相关信息。"></a>1.4  <strong>填写好相关信息。</strong></h4><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826101848.png" style="zoom:70%;" />
+
+<h4 id="1-5-打包构建安装即可。"><a href="#1-5-打包构建安装即可。" class="headerlink" title="1.5 打包构建安装即可。"></a>1.5 <strong>打包构建安装即可。</strong></h4><p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826102956.png"></p>
+<h4 id="1-6-诺，可以正常使用啦！"><a href="#1-6-诺，可以正常使用啦！" class="headerlink" title="1.6 诺，可以正常使用啦！"></a>1.6 <strong>诺，可以正常使用啦！</strong></h4><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826103123.png" style="zoom:70%;" />
+
+
+
+<h3 id="法二：利用HBuilderX构建"><a href="#法二：利用HBuilderX构建" class="headerlink" title="法二：利用HBuilderX构建"></a>法二：利用HBuilderX构建</h3><p>相对于法一来说，这个要稍微进阶一点，我们要借用<a target="_blank" rel="noopener" href="https://www.dcloud.io/hbuilderx.html"><code>HBuilderX</code></a>把文件进行打包构建。既然然说到这里了，不得不插一嘴谈谈<code>uni-app</code>，据说这个特别厉害，<a target="_blank" rel="noopener" href="https://uniapp.dcloud.io/">官方文档</a>是这么解释的：</p>
+<p><code>uni-app</code> 是一个使用 <a target="_blank" rel="noopener" href="https://vuejs.org/">Vue.js</a> 开发所有前端应用的框架，开发者编写一套代码，可发布到iOS、Android、Web（响应式）、以及各种小程序（微信&#x2F;支付宝&#x2F;百度&#x2F;头条&#x2F;QQ&#x2F;快手&#x2F;钉钉&#x2F;淘宝）、快应用等多个平台。</p>
+<p>老牛逼了！改天着手研究研究！好了，让我们来开始转换。</p>
+<h4 id="2-1-新建一个5-App项目"><a href="#2-1-新建一个5-App项目" class="headerlink" title="2.1 新建一个5+App项目"></a>2.1 新建一个<code>5+App</code>项目</h4><blockquote>
+<p> 如果你想了解什么是<code>5+App</code>项目，可以直接去阅读<a target="_blank" rel="noopener" href="https://ask.dcloud.net.cn/docs/#//ask.dcloud.net.cn/article/89">官方文档</a>。</p>
+</blockquote>
+<p>我们填写好项目名字和路径，项目会自动生成相关文件，文件各个内容如下所示。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826113606.png" style="zoom: 80%;" />
+
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826113902.png"></p>
+<p>这里的<code>unpackage</code>文件夹中，放的是一些不用打包编译的文件，<code>manifest</code>则是配置项了。删除<code>css\img\js\index.html</code>  ，把自己的项目文件复制过来，配置好相关权限，然后选择云打包，当然，本地打包也不是不可以，看你自己使用习惯了。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826114948.png"></p>
+<p>然后我么点击<strong>发行</strong>——<strong>原生APP-云打包</strong>。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826115920.png"></p>
+<h4 id="2-2-证书生成打包"><a href="#2-2-证书生成打包" class="headerlink" title="2.2 证书生成打包"></a>2.2 证书生成打包</h4><p>打包需要证书，这里我们生成自己的证书，<font style="color:red">注意，在生成之前，我们需要安装JRE环境</font> ，可以去官网下载：<a target="_blank" rel="noopener" href="https://www.oracle.com/technetwork/java/javase/downloads/index.htm">https://www.oracle.com/technetwork/java/javase/downloads/index.htm</a></p>
+<p>下载好后，配置好环境变量，在一个自己记得住的路径下打开<code>powershell</code>，输入以下命令，生成证书：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">keytool -genkey -alias chuyuxuan -keyalg RSA -keysize 2048 -validity 36500 -keystore chuyuxuan.keystore</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>chuyuxuan</code>是证书别名，可修改为自己想设置的字符，建议使用英文字母和数字</li>
+<li><code>chuyuxuan.keystore</code>是证书文件名称，可修改为自己想设置的文件名称，也可以指定完整文件路径</li>
+<li><code>36500</code>是证书的有效期，表示100年有效期，单位天，建议时间设置长一点，避免证书过期</li>
+</ul>
+<p>回车后会提示：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Enter keystore password:  //输入证书文件密码，输入完成回车  </span><br><span class="line">Re-enter new password:   //再次输入证书文件密码，输入完成回车  </span><br><span class="line">What is your first and last name?  </span><br><span class="line">  [Unknown]:  //输入名字和姓氏，输入完成回车  </span><br><span class="line">What is the name of your organizational unit?  </span><br><span class="line">  [Unknown]:  //输入组织单位名称，输入完成回车  </span><br><span class="line">What is the name of your organization?  </span><br><span class="line">  [Unknown]:  //输入组织名称，输入完成回车  </span><br><span class="line">What is the name of your City or Locality?  </span><br><span class="line">  [Unknown]:  //输入城市或区域名称，输入完成回车  </span><br><span class="line">What is the name of your State or Province?  </span><br><span class="line">  [Unknown]:  //输入省/市/自治区名称，输入完成回车  </span><br><span class="line">What is the two-letter country code for this unit?  </span><br><span class="line">  [Unknown]:  //输入国家/地区代号（两个字母），中国为CN，输入完成回车  </span><br><span class="line">Is CN=XX, OU=XX, O=XX, L=XX, ST=XX, C=XX correct?  </span><br><span class="line">  [no]:  //确认上面输入的内容是否正确，输入y，回车  </span><br><span class="line"></span><br><span class="line">Enter key password for &lt;testalias&gt;  </span><br><span class="line">        (RETURN if same as keystore password):  //确认证书密码与证书文件密码一样（HBuilder|HBuilderX要求这两个密码一致），直接回车就可以</span><br></pre></td></tr></table></figure>
+
+<p>以上命令运行完成后就会在你选择的路径生成证书。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826143110.png" style="zoom: 57%;" />
+
+<h4 id="2-3-查看证书信息"><a href="#2-3-查看证书信息" class="headerlink" title="2.3 查看证书信息"></a>2.3 查看证书信息</h4><p>可以使用以下命令查看：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">复制代码keytool -list -v -keystore chuyuxuan.keystore  </span><br><span class="line">Enter keystore password: //输入密码，回车</span><br></pre></td></tr></table></figure>
+
+<p>会输出以下格式信息：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">密钥库类型: PKCS12</span><br><span class="line">密钥库提供方: SUN</span><br><span class="line">您的密钥库包含 1 个条目</span><br><span class="line">别名: chuyuxuan</span><br><span class="line">创建日期: 2021年8月26日</span><br><span class="line">条目类型: PrivateKeyEntry</span><br><span class="line">证书链长度: 1</span><br><span class="line">证书[1]:</span><br><span class="line">所有者: CN=chu, OU=yuxuan, O=chuyuxuan, L=HN, ST=HN, C=CN</span><br><span class="line">发布者: CN=chu, OU=yuxuan, O=chuyuxuan, L=HN, ST=HN, C=CN</span><br><span class="line">序列号: 542e4e8</span><br><span class="line">生效时间: Thu Aug 26 14:30:51 CST 2021, 失效时间: Sat Aug 02 14:30:51 CST 2121</span><br><span class="line">证书指纹:</span><br><span class="line">         SHA1: 43:52:72:5F:B3:4B:24:4C:F8:0B:8A:7F:58:F1:D8:29:7E:12:84:6B</span><br><span class="line">         SHA256: 9B:00:FE:63:B6:47:AC:74:B0:0F:74:B7:A5:52:1D:C8:D0:23:E0:87:B5:85:8E:D1:85:D1:D8:2D:BF:C6:34:41</span><br><span class="line">签名算法名称: SHA256withRSA</span><br><span class="line">主体公共密钥算法: 2048 位 RSA 密钥</span><br><span class="line">版本: 3</span><br><span class="line">扩展:</span><br><span class="line"><span class="meta prompt_">#</span><span class="language-bash">1: ObjectId: 2.5.29.14 Criticality=<span class="literal">false</span></span></span><br><span class="line">SubjectKeyIdentifier [</span><br><span class="line">KeyIdentifier [</span><br><span class="line">0000: 4F 03 F5 28 33 A2 A8 8C   65 9D A9 68 24 11 C7 2A  O..(3...e..h$..*</span><br><span class="line">0010: 26 EF E7 92                                        &amp;...</span><br><span class="line">]</span><br><span class="line">]</span><br><span class="line">*******************************************</span><br><span class="line">*******************************************</span><br></pre></td></tr></table></figure>
+
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826144010.png" style="zoom:57%;" />
+
+<p>其中证书指纹信息（Certificate fingerprints）：</p>
+<ul>
+<li><p>MD5<br>证书的MD5指纹信息（安全码MD5）</p>
+</li>
+<li><p>SHA1<br>证书的SHA1指纹信息（安全码SHA1）</p>
+</li>
+<li><p>SHA256<br>证书的SHA256指纹信息（安全码SHA245）</p>
+</li>
+</ul>
+<p>我们记住好这些，就可以利用他们来打包了，接下来填入相关信息，进行打包。</p>
+<h4 id="2-4-云打包"><a href="#2-4-云打包" class="headerlink" title="2.4 云打包"></a>2.4 云打包</h4><p>如图，填写好相关信息，打包即可。</p>
+<blockquote>
+<p><font sytle="color:red">注意通讯录权限</font></p>
+</blockquote>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826144451.png" style="zoom: 67%;" />
+
+<p>打包好之后，下载，安装即可。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826145027.png"></p>
+<h4 id="2-5-正常使用"><a href="#2-5-正常使用" class="headerlink" title="2.5 正常使用~~"></a>2.5 正常使用~~</h4><p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826102956.png"></p>
+<h3 id="法三：利用Android-studio构建"><a href="#法三：利用Android-studio构建" class="headerlink" title="法三：利用Android studio构建"></a>法三：利用Android studio构建</h3><p>Android Studio 可是官方指定的安卓应用开发软件。你可以<a target="_blank" rel="noopener" href="https://developer.android.com/studio">点击这里</a>进行下载。后续的操作，你得在这个环境下去实现。<img src="https://gitee.com/chuyuxuan/tuc/raw/master/laugh/081.gif" style="zoom:67%;" /></p>
+<p>不知道你有没有发现，无论是通过<code>一个木函</code>封装还是通过<code>HBuilderX</code>，都有缺点，状态栏，标题栏无法自定义，它是固定住了的，无法手动修改了，所以，通过Android studio ，我们可以刻画出我们任何想要的界面，甚至加入一些丰富的功能。 </p>
+<h4 id="3-1创建一个项目先"><a href="#3-1创建一个项目先" class="headerlink" title="3.1创建一个项目先"></a>3.1创建一个项目先</h4><p>创建项目如下图所示：</p>
+<p>我们要创建一个空的活动页（Activity），这样IDE会帮我们搭建好基础框架，免得我们自己动手去配置了。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826163934.png" style="zoom: 50%;" />
+
+<p>在配置项目相关信息的时候，需要注意的是项目名称，项目语言，以及项目的SDK，注意，下载SDK需要一定的网络环境，否则会报错。SDK是确保你的应用能够运行在安卓系统上的工具包，你需要选择好符合你系统的SDK，一般安卓都是向下兼容的，我们选<code>5.0</code>以上的都行。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826163935.png" style="zoom:67%;" />
+
+
+
+
+
+<h4 id="3-2-熟悉一下结构先"><a href="#3-2-熟悉一下结构先" class="headerlink" title="3.2 熟悉一下结构先"></a>3.2 熟悉一下结构先</h4><p>当你完成初始化之后，我们先来认识各个界面和功能吧，这样对我们之后更改有大用处。如图所示：</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826163955.jpg"></p>
+<p>1️⃣处是视图切换，2️⃣处是控件集合，3️⃣处是目录树，也就是整个文件的结构，4️⃣所编辑的文件。</p>
+<p>和大多数IDE一样，各个功能都差不多，基本上手就能看懂了，这里，就不在一一详细的去解释了。</p>
+<h4 id="3-3-添加WebView到主界面"><a href="#3-3-添加WebView到主界面" class="headerlink" title="3.3 添加WebView到主界面"></a>3.3 添加WebView到主界面</h4><p>由于我们只是利用webView做中间件，即相当于内嵌了一个浏览器，所以我们没有必要再添加其他组件了，直接在主界面上使用即可。</p>
+<p>在设计模式下（Design）我们在组件面板（Palette）中找到小部件（Widgets）,把其中的WebView拖拽到界面中，如图所示：</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826165652.png"></p>
+<p>之后，我们需要设定该组件的高度和宽度，这里，我们然它全屏就好了，匹配父组件即可。直接在最右边的布局（layout）中修改即可，当然，你也可以在代码（Code）模式下，输入以下代码：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:app</span>=<span class="string">&quot;http://schemas.android.com/apk/res-auto&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">xmlns:tools</span>=<span class="string">&quot;http://schemas.android.com/tools&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">tools:context</span>=<span class="string">&quot;.MainActivity&quot;</span>&gt;</span></span><br><span class="line">    </span><br><span class="line">    <span class="tag">&lt;<span class="name">WebView</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:id</span>=<span class="string">&quot;@+id/mWebview&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_width</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:layout_height</span>=<span class="string">&quot;match_parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:visibility</span>=<span class="string">&quot;visible&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintBottom_toBottomOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintEnd_toEndOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintStart_toStartOf</span>=<span class="string">&quot;parent&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">app:layout_constraintTop_toTopOf</span>=<span class="string">&quot;parent&quot;</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">androidx.constraintlayout.widget.ConstraintLayout</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>效果如下图所示了：</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826170354.png"></p>
+<h4 id="3-4-配置-web-View"><a href="#3-4-配置-web-View" class="headerlink" title="3.4 配置 web View"></a>3.4 配置 web View</h4><p>我们界面已经绘制完毕，接下来，就开始配置逻辑了。首先，我们要让Webview显示我们需要显示的东西。</p>
+<p>webView显示我们内容有两种方式，一种是将本地文件打包，另一种是直接访问链接。WebView在Android 4.3之后是基于chrome内核的，这里我们只介绍利用链接的方式加载界面，读取本地文件的方式也大同小异，故不在详解，具体使用方法大家可以参考<a target="_blank" rel="noopener" href="https://developer.android.com/reference/android/webkit/WebView">官方文档</a></p>
+<p>我们在<code>MianActivity.java</code>文件中加入如以下代码：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.example.chuyuxantest;</span><br><span class="line"><span class="keyword">import</span> androidx.appcompat.app.AppCompatActivity;</span><br><span class="line"><span class="keyword">import</span> android.os.Bundle;</span><br><span class="line"><span class="keyword">import</span> android.view.Window;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebView;</span><br><span class="line"><span class="keyword">import</span> android.webkit.WebViewClient;</span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">MainActivity</span> <span class="keyword">extends</span> <span class="title class_">AppCompatActivity</span> &#123;</span><br><span class="line">    <span class="comment">// 定义类属性</span></span><br><span class="line">    <span class="keyword">private</span> WebView mWebView;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">protected</span> <span class="keyword">void</span> <span class="title function_">onCreate</span><span class="params">(Bundle savedInstanceState)</span> &#123;</span><br><span class="line">        <span class="built_in">super</span>.onCreate(savedInstanceState);</span><br><span class="line">        <span class="comment">//去掉标题栏</span></span><br><span class="line">        supportRequestWindowFeature(Window.FEATURE_NO_TITLE);</span><br><span class="line">        setContentView(R.layout.activity_main);</span><br><span class="line">        <span class="comment">// 实例化组件</span></span><br><span class="line">        mWebView = (WebView) findViewById(R.id.mWebview);</span><br><span class="line">        <span class="comment">// 开启javascript 渲染</span></span><br><span class="line">        mWebView.getSettings().setJavaScriptEnabled(<span class="literal">true</span>);</span><br><span class="line">        <span class="comment">// 处理各种浏览器事件</span></span><br><span class="line">        mWebView.setWebViewClient(<span class="keyword">new</span> <span class="title class_">WebViewClient</span>());</span><br><span class="line">        <span class="comment">// 载入内容,这个根据你自己的链接来</span></span><br><span class="line">        mWebView.loadUrl(<span class="string">&quot;https://blog.chuyuxuan.top/&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">//为了提升用户体验，我们加一个返回提示</span></span><br><span class="line">     <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onKeyDown</span><span class="params">(<span class="type">int</span> keyCode, KeyEvent event)</span> &#123;</span><br><span class="line">        <span class="comment">//判断用户是否点击了“返回键”</span></span><br><span class="line">        <span class="keyword">if</span> (keyCode == KeyEvent.KEYCODE_BACK) &#123;</span><br><span class="line">            <span class="comment">//与上次点击返回键时刻作差</span></span><br><span class="line">            <span class="keyword">if</span> ((System.currentTimeMillis() - mExitTime) &gt; <span class="number">2000</span>) &#123;</span><br><span class="line">                <span class="comment">//大于2000ms则认为是误操作，使用Toast进行提示</span></span><br><span class="line">                Toast.makeText(<span class="built_in">this</span>, <span class="string">&quot;请您确保当前的操作正确性，再按一次将退出程序&quot;</span>, Toast.LENGTH_SHORT).show();</span><br><span class="line">                <span class="comment">//并记录下本次点击“返回键”的时刻，以便下次进行判断</span></span><br><span class="line">                mExitTime = System.currentTimeMillis();</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="comment">//小于2000ms则认为是用户确实希望退出程序-调用System.exit()方法进行退出</span></span><br><span class="line">                System.exit(<span class="number">0</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">super</span>.onKeyDown(keyCode, event);</span><br><span class="line">    &#125;  </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">    当然，我们也可也把返回变成浏览器里面返回上一页。</span><br><span class="line">    代码如下：</span><br><span class="line">    </span><br><span class="line">     <span class="meta">@Override</span></span><br><span class="line">    <span class="keyword">public</span> <span class="type">boolean</span> <span class="title function_">onKeyDown</span><span class="params">(<span class="type">int</span> keyCode, KeyEvent event)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> ((keyCode ==  KeyEvent.KEYCODE_BACK) &amp;&amp; mWebView.canGoBack()) &#123;</span><br><span class="line">            mWebView.goBack();</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">super</span>.onKeyDown(keyCode, event);</span><br><span class="line">    &#125;</span><br><span class="line">  </span><br><span class="line">    </span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>我们不要忘记申请网络权限哈！找到<code>app</code>目录下的<code>manifests</code>，配置<code>AndroidManifest.xml</code>。</strong><br>代码如下所示：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=<span class="string">&quot;1.0&quot;</span> encoding=<span class="string">&quot;utf-8&quot;</span>?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">manifest</span> <span class="attr">xmlns:android</span>=<span class="string">&quot;http://schemas.android.com/apk/res/android&quot;</span></span></span><br><span class="line"><span class="tag">    <span class="attr">package</span>=<span class="string">&quot;com.example.chuyuxantest&quot;</span>&gt;</span></span><br><span class="line"> 	<span class="comment">&lt;!-- 申请 网络权限--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">uses-permission</span> <span class="attr">android:name</span>=<span class="string">&quot;android.permission.INTERNET&quot;</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">application</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:allowBackup</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:icon</span>=<span class="string">&quot;@mipmap/ic_launcher&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:label</span>=<span class="string">&quot;@string/app_name&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:roundIcon</span>=<span class="string">&quot;@mipmap/ic_launcher_round&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:supportsRtl</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:usesCleartextTraffic</span>=<span class="string">&quot;true&quot;</span></span></span><br><span class="line"><span class="tag">        <span class="attr">android:theme</span>=<span class="string">&quot;@style/Theme.ChuyuxanTest&quot;</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">activity</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:name</span>=<span class="string">&quot;.MainActivity&quot;</span></span></span><br><span class="line"><span class="tag">            <span class="attr">android:exported</span>=<span class="string">&quot;true&quot;</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">action</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.action.MAIN&quot;</span> /&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">category</span> <span class="attr">android:name</span>=<span class="string">&quot;android.intent.category.LAUNCHER&quot;</span> /&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">intent-filter</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">activity</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">application</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">manifest</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="3-5-配置主题颜色图标应用名称"><a href="#3-5-配置主题颜色图标应用名称" class="headerlink" title="3.5 配置主题颜色图标应用名称"></a>3.5 配置主题颜色图标应用名称</h4><p>接下来，我们找到<code>res</code>目录下的<code>mipmap</code>文件，这里是我们的应用图标，应为要适配平板，手机，手表等，所以需要不同的格式，你选择自己喜欢的图片即可。</p>
+<p>我们要该的主题颜色，应用文件等都在values文件夹中配置。如果你向我一样有强迫症，记得仔细改哈。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826173905.png"></p>
+<h4 id="3-6-开始打包部署吧"><a href="#3-6-开始打包部署吧" class="headerlink" title="3.6 开始打包部署吧"></a>3.6 开始打包部署吧</h4><p>我们找到菜单栏中的<code>build</code>，找到下面的<code>Build Bundle(s)/ APK(s)</code>或者<code>Generate Signed Bundle /APK </code>，运行起来，当然，你也可也运行没有签名的，这里，我们选择生成签名的APK。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826174932.png"></p>
+<h5 id="3-6-1证书配置"><a href="#3-6-1证书配置" class="headerlink" title="3.6.1证书配置"></a>3.6.1证书配置</h5><p>导入我们之前在<code>HBuilderX</code>配置好了的证书，当然，你也可以再重新签名一张。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826175651.png" style="zoom:50%;" />
+
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826175652.png" style="zoom:67%;" />
+
+
+
+<p>填写好证书相关信息后，选择<code>release</code>	即可打包，之后，在当前目录下就会生成APP文件，我们安装到手机上即可。</p>
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826175841.png" style="zoom: 67%;" />
+
+
+
+<img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826180038.png" style="zoom:67%;" />
+
+<p>不得不说，观感好了很多。</p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826102956.png"></p>
+<p><img src="https://gitee.com/Chuyuxuan/tuc/raw/master/20210826182700.png"></p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>总的来说，效果达到了，但是还是有点欠缺，例如，AndroidStudio中，一些控件用法，生命周期函数等，Java语法，用的还不是太熟练，只停留在基本了解阶段，还有很多要学。相对于的Android开发大佬，我还只是个刚入门的小菜鸟。</p>
+<p>打包webview只是学习Android开发的一小步，虽然谷歌安卓开发技术每年都在改变，每年都在提升，但接下来的几年里，Android还是在技术前沿，我们学习前端开发，不能够仅仅停留在会用Vue \React \angular的框架上，还需要不断的综合提升，才能走更远。</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top">chuyuxuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blognew.chuyuxuan.top/2021/08/31/%E5%B0%86%E7%BD%91%E9%A1%B5%E5%B0%81%E8%A3%85%E5%AE%89%E5%8D%93APP%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E6%B3%95/">https://blognew.chuyuxuan.top/2021/08/31/将网页封装安卓APP的几种方法/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blognew.chuyuxuan.top" target="_blank">CHUYUXUAN</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E5%89%8D%E7%AB%AF/">前端</a><a class="post-meta__tags" href="/tags/Android/">Android</a><a class="post-meta__tags" href="/tags/WebView/">WebView</a></div><div class="post_share"><div class="social-share" data-image="https://gitee.com/Chuyuxuan/tuc/raw/master/20210831094926.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2021/09/24/CSS%E4%B8%AD%E9%97%AE%E9%A2%98BFC/" title="CSS中的BFC问题"><div class="cover" style="background: var(--default-bg-color)"></div><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">CSS中的BFC问题</div></div></a></div><div class="next-post pull-right"><a href="/2021/08/20/%E5%A4%A7%E6%96%87%E4%BB%B6%E5%88%86%E7%89%87%E4%B8%8A%E4%BC%A0%E4%BB%A5%E5%8F%8A%E7%9B%B8%E5%85%B3%E4%BC%98%E5%8C%96/" title="大文件分片上传以及相关优化"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/Cartoon_pictures/983551eb1371875307bd23dca19c9c86.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">大文件分片上传以及相关优化</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2020/02/10/CSS-Background/" title="CSS背景相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-10</div><div class="title">CSS背景相关</div></div></a></div><div><a href="/2020/02/11/CSS-link/" title="CSS链接相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS链接相关</div></div></a></div><div><a href="/2020/02/11/CSS-list%E7%9B%B8%E5%85%B3/" title="CSS-list相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS-list相关</div></div></a></div><div><a href="/2020/02/11/CSS-text%E5%B1%9E%E6%80%A7/" title="CSS-Text相关"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-11</div><div class="title">CSS-Text相关</div></div></a></div><div><a href="/2020/02/10/CSS%E9%80%89%E6%8B%A9%E5%99%A8/" title="CSS选择器"><img class="cover" src="https://gitee.com/chuyuxuan/tuc/raw/master/CSS/1.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2020-02-10</div><div class="title">CSS选择器</div></div></a></div><div><a href="/2021/12/21/%E5%85%A8%E7%AD%89%E5%92%8C%E7%9B%B8%E7%AD%89%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%98%9B/" title="js相等和全等你真的了解嘛"><img class="cover" src="https://s2.loli.net/2021/12/21/BK1FH9zCGpfdvNU.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-21</div><div class="title">js相等和全等你真的了解嘛</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">chuyuxuan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">55</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">66</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E4%B8%80%EF%BC%9A%E5%88%A9%E7%94%A8%E4%B8%80%E4%B8%AA%E6%9C%A8%E5%87%BD%E5%B0%81%E8%A3%85"><span class="toc-number">1.</span> <span class="toc-text">法一：利用一个木函封装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1-1-%E6%89%8B%E6%9C%BA%E5%BA%94%E7%94%A8%E5%95%86%E5%BA%97%E6%90%9C%E7%B4%A2%E4%B8%80%E4%B8%AA%E6%9C%A8%E5%87%BD%E5%BA%94%E7%94%A8%E3%80%82"><span class="toc-number">1.1.</span> <span class="toc-text">1.1 手机应用商店搜索一个木函应用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-2-%E6%89%BE%E5%88%B0%E4%B8%8B%E8%BD%BD%E5%B9%B6%E5%AE%89%E8%A3%85%E3%80%82"><span class="toc-number">1.2.</span> <span class="toc-text">1.2  找到下载并安装。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-3-%E6%89%93%E5%BC%80%EF%BC%8C%E4%BE%9D%E6%AC%A1-%E5%85%A8%E9%83%A8%E5%BA%94%E7%94%A8-gt-gt-%E7%BD%91%E9%A1%B5%E8%BD%AC%E5%BA%94%E7%94%A8%E3%80%82"><span class="toc-number">1.3.</span> <span class="toc-text">1.3  打开，依次 全部应用&gt;&gt;网页转应用。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-4-%E5%A1%AB%E5%86%99%E5%A5%BD%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF%E3%80%82"><span class="toc-number">1.4.</span> <span class="toc-text">1.4  填写好相关信息。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-5-%E6%89%93%E5%8C%85%E6%9E%84%E5%BB%BA%E5%AE%89%E8%A3%85%E5%8D%B3%E5%8F%AF%E3%80%82"><span class="toc-number">1.5.</span> <span class="toc-text">1.5 打包构建安装即可。</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#1-6-%E8%AF%BA%EF%BC%8C%E5%8F%AF%E4%BB%A5%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8%E5%95%A6%EF%BC%81"><span class="toc-number">1.6.</span> <span class="toc-text">1.6 诺，可以正常使用啦！</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%88%A9%E7%94%A8HBuilderX%E6%9E%84%E5%BB%BA"><span class="toc-number">2.</span> <span class="toc-text">法二：利用HBuilderX构建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#2-1-%E6%96%B0%E5%BB%BA%E4%B8%80%E4%B8%AA5-App%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.1.</span> <span class="toc-text">2.1 新建一个5+App项目</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-2-%E8%AF%81%E4%B9%A6%E7%94%9F%E6%88%90%E6%89%93%E5%8C%85"><span class="toc-number">2.2.</span> <span class="toc-text">2.2 证书生成打包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-3-%E6%9F%A5%E7%9C%8B%E8%AF%81%E4%B9%A6%E4%BF%A1%E6%81%AF"><span class="toc-number">2.3.</span> <span class="toc-text">2.3 查看证书信息</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-4-%E4%BA%91%E6%89%93%E5%8C%85"><span class="toc-number">2.4.</span> <span class="toc-text">2.4 云打包</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2-5-%E6%AD%A3%E5%B8%B8%E4%BD%BF%E7%94%A8"><span class="toc-number">2.5.</span> <span class="toc-text">2.5 正常使用~~</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E4%B8%89%EF%BC%9A%E5%88%A9%E7%94%A8Android-studio%E6%9E%84%E5%BB%BA"><span class="toc-number">3.</span> <span class="toc-text">法三：利用Android studio构建</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#3-1%E5%88%9B%E5%BB%BA%E4%B8%80%E4%B8%AA%E9%A1%B9%E7%9B%AE%E5%85%88"><span class="toc-number">3.1.</span> <span class="toc-text">3.1创建一个项目先</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-2-%E7%86%9F%E6%82%89%E4%B8%80%E4%B8%8B%E7%BB%93%E6%9E%84%E5%85%88"><span class="toc-number">3.2.</span> <span class="toc-text">3.2 熟悉一下结构先</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-3-%E6%B7%BB%E5%8A%A0WebView%E5%88%B0%E4%B8%BB%E7%95%8C%E9%9D%A2"><span class="toc-number">3.3.</span> <span class="toc-text">3.3 添加WebView到主界面</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-4-%E9%85%8D%E7%BD%AE-web-View"><span class="toc-number">3.4.</span> <span class="toc-text">3.4 配置 web View</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-5-%E9%85%8D%E7%BD%AE%E4%B8%BB%E9%A2%98%E9%A2%9C%E8%89%B2%E5%9B%BE%E6%A0%87%E5%BA%94%E7%94%A8%E5%90%8D%E7%A7%B0"><span class="toc-number">3.5.</span> <span class="toc-text">3.5 配置主题颜色图标应用名称</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3-6-%E5%BC%80%E5%A7%8B%E6%89%93%E5%8C%85%E9%83%A8%E7%BD%B2%E5%90%A7"><span class="toc-number">3.6.</span> <span class="toc-text">3.6 开始打包部署吧</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#3-6-1%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE"><span class="toc-number">3.6.1.</span> <span class="toc-text">3.6.1证书配置</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty"><img src="https://s2.loli.net/2023/08/06/Np49USqBcGLwefH.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码阅读-Object.defineProperty"/></a><div class="content"><a class="title" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty">vue源码阅读-Object.defineProperty</a><time datetime="2023-08-06T07:10:58.000Z" title="发表于 2023-08-06 15:10:58">2023-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG"><img src="https://s2.loli.net/2023/06/21/FouatOY6wW7sfI9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何优雅的甩锅BUG"/></a><div class="content"><a class="title" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG">如何优雅的甩锅BUG</a><time datetime="2023-06-21T01:46:59.000Z" title="发表于 2023-06-21 09:46:59">2023-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/06/11/" title="如何拿到选项的label">如何拿到选项的label</a><time datetime="2023-03-06T11:15:29.000Z" title="发表于 2023-03-06 19:15:29">2023-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网"><img src="https://s2.loli.net/2022/11/01/XurvGZ2QkBUIWmY.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win设置同时链接内外网"/></a><div class="content"><a class="title" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网">win设置同时链接内外网</a><time datetime="2022-11-01T04:03:29.000Z" title="发表于 2022-11-01 12:03:29">2022-11-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?"><img src="https://s2.loli.net/2022/10/09/rvQuakSAYZ2b9Wg.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="尝试配置一下简单的webpack?"/></a><div class="content"><a class="title" href="/2022/10/09/%E5%B0%9D%E8%AF%95%E9%85%8D%E7%BD%AE%E4%B8%80%E4%B8%8B%E7%AE%80%E5%8D%95%E7%9A%84webpack/" title="尝试配置一下简单的webpack?">尝试配置一下简单的webpack?</a><time datetime="2022-10-09T13:50:31.000Z" title="发表于 2022-10-09 21:50:31">2022-10-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2023 By CHUYUXUAN</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>Design By </span><a href="https://blognew.chuyuxuan.top">CHUYUXUAN</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+      appKey: 't4eW4wzuDJuIU1McV0Ir9Dzq',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
