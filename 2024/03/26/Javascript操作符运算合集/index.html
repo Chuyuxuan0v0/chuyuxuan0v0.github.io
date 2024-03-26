@@ -1,0 +1,360 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>Javascript操作符运算合集 | CHUYUXUAN</title><meta name="author" content="chuyuxuan"><meta name="copyright" content="chuyuxuan"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Javascript操作符运算合集在javascript的语法中，不同类型通过操作符运算后求最终值这样的运算，在面试过程中会经常碰到，因此，今天我们就来一起探讨一下对应的规则。 四则运算符+ 加法加法有两种运算法则，分别为数字加法和字符串连接。运算时，它首先将两个操作数强制转换为基本类型后再计算。我们来一一举例：  若有一方是字符串，则另一方会被转换成字符串，最后再连接起来形成新的字符串。 123">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript操作符运算合集">
+<meta property="og:url" content="https://blog.chuyuxuan.top/2024/03/26/Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86/index.html">
+<meta property="og:site_name" content="CHUYUXUAN">
+<meta property="og:description" content="Javascript操作符运算合集在javascript的语法中，不同类型通过操作符运算后求最终值这样的运算，在面试过程中会经常碰到，因此，今天我们就来一起探讨一下对应的规则。 四则运算符+ 加法加法有两种运算法则，分别为数字加法和字符串连接。运算时，它首先将两个操作数强制转换为基本类型后再计算。我们来一一举例：  若有一方是字符串，则另一方会被转换成字符串，最后再连接起来形成新的字符串。 123">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s21.ax1x.com/2024/03/26/pF5gcY4.png">
+<meta property="article:published_time" content="2024-03-26T10:40:59.000Z">
+<meta property="article:modified_time" content="2024-03-26T11:34:41.310Z">
+<meta property="article:author" content="chuyuxuan">
+<meta property="article:tag" content="面试">
+<meta property="article:tag" content="javascript">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s21.ax1x.com/2024/03/26/pF5gcY4.png"><link rel="shortcut icon" href="/img/favicon1.ico"><link rel="canonical" href="https://blog.chuyuxuan.top/2024/03/26/Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?66e8bfee2641f792cfb4b22b2cf76e0e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: {"limitDay":500,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: true,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Javascript操作符运算合集',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2024-03-26 19:34:41'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      if (id) link.id = id
+      link.onerror = reject
+      link.onload = link.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        link.onload = link.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/avatar1.jpg" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">67</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a href="/" title="CHUYUXUAN"></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-address-book"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> Link</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Javascript操作符运算合集</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-03-26T10:40:59.000Z" title="发表于 2024-03-26 18:40:59">2024-03-26</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-03-26T11:34:41.310Z" title="更新于 2024-03-26 19:34:41">2024-03-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Javascript操作符运算合集"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><link rel="stylesheet" type="text&#x2F;css" href="https://cdn.jsdelivr.net/npm/hexo-tag-hint@0.3.1/dist/hexo-tag-hint.min.css"><h2 id="Javascript操作符运算合集"><a href="#Javascript操作符运算合集" class="headerlink" title="Javascript操作符运算合集"></a>Javascript操作符运算合集</h2><p>在<code>javascript</code>的语法中，不同类型通过操作符运算后求最终值这样的运算，在面试过程中会经常碰到，因此，今天我们就来一起探讨一下对应的规则。</p>
+<h3 id="四则运算符"><a href="#四则运算符" class="headerlink" title="四则运算符"></a>四则运算符</h3><h4 id="加法"><a href="#加法" class="headerlink" title="+ 加法"></a><code>+</code> 加法</h4><p>加法有两种运算法则，分别为<strong>数字加法</strong>和<strong>字符串连接</strong>。运算时，它首先将两个操作数<strong>强制转换</strong>为<code>基本类型</code>后再计算。我们来一一举例：</p>
+<ul>
+<li><p>若有一方是<code>字符串</code>，则另一方会被转换成<code>字符串</code>，最后再连接起来形成新的<code>字符串</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;chuyuxuan&#x27;</span></span><br><span class="line"><span class="keyword">const</span> num = <span class="number">1</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str + num) <span class="comment">// chuyuxuan1</span></span><br><span class="line"><span class="keyword">typeof</span> (str + num) <span class="comment">// &#x27;string&#x27;</span></span><br></pre></td></tr></table></figure>
+
+
+</li>
+<li><p>若双方都是<code> BigInt</code>，则执行<code> BigInt</code> 加法。如果一方是 BigInt 而**另一方<sup><font style=color:red>[1]</font></sup>**不是，会抛出 TypeError。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 双方都是 BigInt</span></span><br><span class="line"><span class="keyword">const</span> bnum1 = <span class="number">2024n</span></span><br><span class="line"><span class="keyword">const</span> bnum2 = <span class="number">2025n</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bnum1 + bnum2) <span class="comment">// 4049n</span></span><br><span class="line"><span class="keyword">typeof</span> (bnum1 + bnum2) <span class="comment">// &#x27;bigint&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 一方不是 BigInt</span></span><br><span class="line"><span class="keyword">const</span> bigNum = <span class="number">2024n</span></span><br><span class="line"><span class="keyword">const</span> myBoolean = <span class="literal">true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(bigNum + myBoolean) <span class="comment">// Uncaught TypeError: Cannot mix BigInt and other types, use explicit conversions</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>[1]注意，如果有一方是**<font style=color:red>字符串</font>**，则会执行上述<code>字符串</code>的规则</p>
+</blockquote>
+</li>
+<li><p>除上述外，若双方都是<font style=color:red>其他基本类型</font>，则都会被转换成 <strong>数字类型</strong><sup><font style=color:red>[2]</font></sup>，再进行加法运算。如果有任一操作数是 <code>NaN</code>，则返回 <code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myNull = <span class="literal">null</span></span><br><span class="line"><span class="keyword">const</span> myBoolean = <span class="literal">false</span></span><br><span class="line"><span class="keyword">const</span> myUndefined= <span class="literal">undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNull + myBoolean) <span class="comment">// 0 </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNull + myUndefined) <span class="comment">// NaN</span></span><br><span class="line"><span class="comment">// myNull 会转换成数字 0， myBoolean 会转换成数字 0 ，myUndefined 会转换成 NaN</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>[2]调用 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2">Number()</a> 将其参数转换为数字进行混合计算时。部分参数转换结果如下，其他请参考<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Number#number_%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2">MDN</a>：</p>
+<ul>
+<li>Number 将按原样返回，包括正负号</li>
+<li><code>Infinity</code> 返回自身，包括正负号</li>
+<li><code>undefined</code> 转换为<code>NaN</code></li>
+<li><code>null</code>转换为<code>0</code></li>
+<li><code>true</code>转换成<code>1</code>，<code>false</code>转换成<code>0</code></li>
+<li><code>空字符串</code> 转换为 <code>0 </code></li>
+<li><code>字符串</code> 转换为 <code>NaN</code> (加法法则中则会都转成字符串)</li>
+<li><code>BigInt</code>抛出 <code>TypeError</code></li>
+<li><code>Symbol</code>抛出 <code>TypeError</code></li>
+</ul>
+</blockquote>
+</li>
+</ul>
+<div class="note warning flat"><p>注意，在<code>BigInt</code>中，使用Number(12n) 会得到 12 ，在ECMAScript是被允许的，但是这样会导致BigInt类型的数据丢失精度。但是，<strong>如果利用BigInt 与 Number()实例进行混合运算则会报错，因为两者的基本类型不一致</strong>。详情可以见<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/BigInt">MDN</a>对BigInt的描述。</p>
+</div>
+
+<h4 id="减法"><a href="#减法" class="headerlink" title="- 减法"></a><code>-</code> 减法</h4><p>减法首先会把<strong>两边转换为数值</strong>，并根据两个操作数的类型执行数字减法，如果类型不匹配，则抛出 TypeError。与加法不一样，字符串也会优先转换成数值了，而不是先调用toString()进行转换。让我们来具体看下例子：</p>
+<ul>
+<li><p>若双方<code>都是数值</code>，则执行数值减法。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> num1 = <span class="number">100</span></span><br><span class="line"><span class="keyword">const</span> num2 = <span class="number">50</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(num1 - num2) <span class="comment">// 50 </span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>若双方都是<code> BigInt</code>，则执行<code> BigInt</code>减法。如果一方是 <code>BigInt</code> 而**另一方<sup><font style=color:red>[3]</font></sup>**不是，会抛出 TypeError。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> b1 = <span class="number">100n</span></span><br><span class="line"><span class="keyword">const</span> b2 = <span class="number">50n</span></span><br><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;chuyuxuan&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b1 - b2) <span class="comment">// 50n </span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(b1 - str) <span class="comment">// TypeError: Cannot mix BigInt and other types, use explicit conversions</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<blockquote>
+<p>[3] 	除了BigInt的其他基本类型</p>
+</blockquote>
+<ul>
+<li><p>若双方都是<code>非数值</code>，则会先用Number()转换成数值，再计算。Number转换规则见注解2。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 一方是 string，一方是 null</span></span><br><span class="line"><span class="keyword">const</span> str = <span class="string">&#x27;chuyuxuan&#x27;</span></span><br><span class="line"><span class="keyword">const</span> myNull = <span class="literal">null</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNum - myNull) <span class="comment">// NaN</span></span><br><span class="line"><span class="comment">// string 会被转换成NaN ，NaN 除了 BitInt 基本类型外，相减(无论是减数还是被减数)都为NaN</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 一方是 Infinity，一方是 boolean</span></span><br><span class="line"><span class="keyword">const</span> myBoolean = <span class="literal">false</span></span><br><span class="line"><span class="keyword">const</span> num = <span class="title class_">Infinity</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myBoolean - num) <span class="comment">// -Infinity</span></span><br><span class="line"><span class="comment">// myBoolean 会被转换为 0， 0 减去一个数值，取反。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 一方是 Symbol ，一方是 undefined</span></span><br><span class="line"><span class="keyword">const</span> ms = <span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> myUndefined = <span class="literal">undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myUndefined - ms) <span class="comment">// TypeError: Cannot convert a Symbol value to a number</span></span><br><span class="line"><span class="comment">// Symbol 不能和任何 Number 实例混合运算</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h4 id="乘法"><a href="#乘法" class="headerlink" title="* 乘法"></a><code>*</code> 乘法</h4><p><strong>乘法</strong>运算也一样，会先把两边转换为<strong>数值基本类型</strong>再进行乘积运算。不过需要注意一下Infinity 与 NaN：</p>
+<ul>
+<li><p><code>Infinity</code> 相乘</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myIn = <span class="title class_">Infinity</span></span><br><span class="line"><span class="keyword">const</span> mystr = <span class="string">&#x27;chuyuxuan&#x27;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( myIn * mystr ) <span class="comment">// NaN</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( myIn* myIn) <span class="comment">// Infinity  与数值相乘都为无穷</span></span><br></pre></td></tr></table></figure>
+
+<p><code>非数值基本类型</code>相乘</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myNull = <span class="literal">null</span></span><br><span class="line"><span class="keyword">const</span> mystr = <span class="string">&#x27;&#x27;</span></span><br><span class="line"><span class="keyword">const</span> myUn = <span class="literal">undefined</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNull * mystr) <span class="comment">// 0</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNull * myUn) <span class="comment">// NaN</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<p><code>/  </code>  除法</p>
+<p>会先把两边转换为<strong>数值基本类型</strong>再进行除法运算，除法中，如果除数（符号右边）是 数值0，则会为 Infinity。有NaN 则为NaN</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">12</span> / <span class="number">2</span>);</span><br><span class="line"><span class="comment">// Expected output: 6</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">3</span> / <span class="title class_">Infinity</span> );</span><br><span class="line"><span class="comment">// Expected output: 0 , 因为对于无穷来说，任何都趋近于0</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Infinity</span> / <span class="title class_">Infinity</span> );</span><br><span class="line"><span class="comment">// Expected output: NaN 没有意义，不是一个数</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">12</span> / <span class="string">&#x27;ewe&#x27;</span>);</span><br><span class="line"><span class="comment">// Expected output: NaN</span></span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Infinity</span> / <span class="number">0</span>);</span><br><span class="line"><span class="comment">// Expected output: Infinity</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><h4 id="相等-松散相等"><a href="#相等-松散相等" class="headerlink" title="==相等(松散相等)"></a><code>==</code>相等(松散相等)</h4><p><strong>松散相等运算符</strong>（<code>==</code>）检查其两个操作数是否相等，返回一个布尔值结果。它会比较不同类型的操作数，并尝试强制类型转换。</p>
+<h5 id="1-如果操作数具有相同的基本类型"><a href="#1-如果操作数具有相同的基本类型" class="headerlink" title="1.如果操作数具有相同的基本类型"></a>1.如果操作数具有相同的<code>基本类型</code></h5><ul>
+<li><p>Object：仅当两个操作数<strong>引用同一个对象</strong>时返回 <code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> obj1 = &#123;<span class="attr">name</span>:<span class="string">&#x27;chuyuxuan&#x27;</span>&#125;</span><br><span class="line"><span class="keyword">const</span> obj2 = obj1</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj1 == obj2) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> obj3 = &#123;<span class="attr">name</span>:<span class="string">&#x27;chuyuxuan&#x27;</span>&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(obj1 == obj3) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>String：只有当两个操作数具有相同的字符且顺序相同时才返回 <code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> str1 = <span class="string">&quot;chuyuxuan&quot;</span></span><br><span class="line"><span class="keyword">const</span> str2 = <span class="string">&quot;chuyuxuan0v0&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str1 == str2) <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(str1 == str1) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Number：如果两个操作数的值相同，则返回 <code>true</code>。<code>+0</code>、<code>0</code> 和 <code>-0</code> 被视为相同的值。如果任何一个操作数是 <code>NaN</code>，返回 <code>false</code>；所以，<code>NaN</code> 永远不等于 <code>NaN</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">18</span> == <span class="number">18</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( -<span class="number">0</span> == +<span class="number">0</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">Infinity</span> == <span class="title class_">Infinity</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title class_">NaN</span> == <span class="title class_">NaN</span>) <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="title class_">Number</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="number">18</span>) <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Boolean：仅当操作数都为 <code>true</code> 或都为 <code>false</code> 时返回 <code>true</code>，否则返回<code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> == <span class="literal">true</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="literal">false</span> == <span class="literal">false</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">false</span> == <span class="literal">true</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>BigInt：仅当两个操作数值相同时返回 <code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">18n</span> == <span class="number">18n</span>) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="number">18n</span> == <span class="number">19n</span>) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Symbol：仅当两个操作数引用相同的符号时返回 <code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> sy = <span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> mb = sy</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sy == mb) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> ol = <span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan0v0&#x27;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(sy == ol) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Null ：两个操作数互为 null 时返回<code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">null</span> == <span class="literal">null</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Undefined：两个操作数互为 undefined 时返回<code>true</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">undefined</span> == <span class="literal">undefined</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<h5 id="2-如果操作数基本类型不同"><a href="#2-如果操作数基本类型不同" class="headerlink" title="2.如果操作数基本类型不同"></a>2.如果操作数<code>基本类型</code>不同</h5><p>​		2.1  如果其中一个操作数为 <code>null</code> 或 <code>undefined</code>，另一个操作数为 <code>null</code> 或 <code>undefined</code> 以返回 <code>true</code>。否则返回 <code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="literal">null</span> == <span class="literal">null</span> <span class="comment">// true</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">undefined</span> <span class="comment">// true</span></span><br><span class="line"><span class="literal">null</span> == <span class="number">1</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="title class_">Symbol</span>(<span class="number">1</span>) <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="string">&#x27;&#x27;</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == <span class="number">18n</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">null</span> == [] <span class="comment">// false</span></span><br><span class="line"></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">null</span> <span class="comment">// true</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">undefined</span> <span class="comment">// true</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="number">1</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="title class_">Symbol</span>(<span class="number">1</span>) <span class="comment">// false</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="string">&#x27;&#x27;</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">undefined</span> == <span class="number">18n</span> <span class="comment">// false</span></span><br><span class="line"><span class="literal">undefined</span> == [] <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>​		2.2 如果其中一个操作数是<code> Symbol</code> 而另一个不是，返回 <code>false</code>。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="literal">null</span> <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="number">18n</span> <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="number">1</span> <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="string">&#x27;chuyuxuan&#x27;</span> <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="literal">true</span> <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == [] <span class="comment">// false</span></span><br><span class="line"><span class="title class_">Symbol</span>(<span class="string">&#x27;chuyuxuan&#x27;</span>) == <span class="literal">undefined</span> <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<p>​		2.3 如果其中一个操作数是<code>布尔型</code>而另一个是其他类型，<font style=color:red>则<code>将布尔型</code>转换为<code>数值</code></font>：<code>true</code> 转换为 1，<code>false</code> 转换为 0。然后再次松散地比较两个操作数（即一个操作数是<code>数值</code>，另一个不是的规则进行比较）。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="literal">true</span> == <span class="number">1</span> ) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>​		2.4  如果一个操作数是<code>字符串</code>而另一个是<code>数值</code>。<font style=color:red>则会把<code>字符串</code>转换为<code>数值</code></font>，如果转换失败，则为 <code>NaN</code>，<code>NaN</code> 则会导致 false。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;chuyuxuan&quot;</span> == <span class="number">18</span> ) <span class="comment">// false</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;5&quot;</span> == <span class="number">5</span>) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<p>​	  2.5  如果一个操作数是<code>BigInt</code>而另一个是<code>数值</code>。<font style=color:red>则会把<code>BigInt</code>通过<code>Number</code>转换为<code>数值</code></font>，如果数值为<code> ±∞</code> 或 <code>NaN</code>，则为false。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="number">18n</span> == <span class="number">18</span> ) <span class="comment">// true</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>( <span class="number">18n</span> == <span class="title class_">Infinity</span> ) <span class="comment">// false</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="3-如果操作数有引用类型"><a href="#3-如果操作数有引用类型" class="headerlink" title="3.如果操作数有引用类型"></a>3.如果操作数有<code>引用类型</code></h5><p>​	  如果一个操作数是<code>对象</code>，另一个是<code>基本类型</code>，<font style=color:red>则会把<code>对象</code>的转成<code>基本类型</code></font>。</p>
+<ul>
+<li><p>对象会首先调用内置的 <code>Symbol.toPrimitive</code>方法转(详情见<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive">MDN</a>)，若没有该方法，则往下。</p>
+</li>
+<li><p>对象再通过 <code>valueOf()</code> 方法尝试转换，如果返回依然不是基本类型，则往下。</p>
+</li>
+<li><p>对象会继续调用<code>toString()</code>，最后再执行<strong>基本类型比较</strong>。（从2.1开始，操作数具有相同的类型，接着往下，直至比较出结果跳出循环）。</p>
+</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> myNumberObj = <span class="keyword">new</span> <span class="title class_">Number</span>(<span class="number">18</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myNumberObj == <span class="number">18</span>) <span class="comment">// true</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> myStr = <span class="string">&#x27;[object Object]&#x27;</span></span><br><span class="line"><span class="keyword">const</span> myStringObj = &#123;<span class="attr">name</span>:<span class="string">&#x27;chuyuxuan&#x27;</span>,<span class="attr">age</span>:<span class="number">18</span>&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(myStringObj == myStr) <span class="comment">// true</span></span><br></pre></td></tr></table></figure>
+
+<div class="note primary flat"><p>MDN 中对 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf">valueOf()</a>解释如下：</p>
+<p><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object"><code>Object</code></a> 实例的 <strong><code>valueOf()</code></strong> 方法将 <code>this</code> 值<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object#%E5%AF%B9%E8%B1%A1%E5%BC%BA%E5%88%B6%E8%BD%AC%E6%8D%A2">转换成对象</a>。该方法旨在被派生对象重写，以实现自定义<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Data_structures#%E5%BC%BA%E5%88%B6%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">类型转换</a>逻辑。</p>
+<p>大白话就是 new对象给的初始值就是 valueOf的返回值，例如 <code>let strObj = new String(&#39;chuyuxuan&#39;)</code>，则在 strObj 上this指向值为 ‘chuyuxuan’</p>
+<p>在上述比较过程中，<code>valueOf()</code>的返回值不是属于基本类型里面的，则会继续调用<code>toString()</code>方法，转换成<code>String</code>类型，进行比较。</p>
+</div>
+
+
+
+<h4 id="逻辑非"><a href="#逻辑非" class="headerlink" title="!逻辑非"></a><code>!</code>逻辑非</h4><p>如果其操作数可以转化为 <code>true</code>，则返回 <code>false</code>，否则返回 <code>true</code>。虽然挺废话的，但也是如此，😂。</p>
+<p>其实我们可以这样理解，<code>! </code>就是对 操作数转成Boolean类型之后，进行取反。如何把一个类型转成Boolean类型？我们可以借用 <code>Boolean() </code>构造函数。**<code>Boolean()</code>** 构造函数可以创建 <a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean"><code>Boolean</code></a> 对象或返回布尔类型的原始值。</p>
+<p>在Boolean构造函数中，当起参数为一下基本类型：</p>
+<ul>
+<li><p>没有值（或者省略）</p>
+</li>
+<li><p>0</p>
+</li>
+<li><p>-0</p>
+</li>
+<li><p>+0</p>
+</li>
+<li><p>0n</p>
+</li>
+<li><p>null</p>
+</li>
+<li><p>false</p>
+</li>
+<li><p>NaN</p>
+</li>
+<li><p>undefined</p>
+</li>
+<li><p>“” (空字符串)</p>
+</li>
+</ul>
+<p><code>Boolean() </code>构造函数 返回 false</p>
+<p>若参数为 </p>
+<ul>
+<li>任何对象 （当然，这里也包括 <code>[]</code> 空数组）</li>
+<li>非空字符串</li>
+</ul>
+<p><code>Boolean() </code>构造函数 返回 true</p>
+<p>所以，我们对以上进行逻辑非，那么就能够得到其正确的值。</p>
+<div class="note waring flat"><p>逻辑非的优先级高于四则运算。</p>
+</div>
+
+
+
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://blog.chuyuxuan.top">chuyuxuan</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://blog.chuyuxuan.top/2024/03/26/Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86/">https://blog.chuyuxuan.top/2024/03/26/Javascript操作符运算合集/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://blog.chuyuxuan.top" target="_blank">CHUYUXUAN</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E9%9D%A2%E8%AF%95/">面试</a><a class="post-meta__tags" href="/tags/javascript/">javascript</a></div><div class="post_share"><div class="social-share" data-image="https://s21.ax1x.com/2024/03/26/pF5gcY4.png" data-sites="wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty"><img class="cover" src="https://s2.loli.net/2023/08/06/Np49USqBcGLwefH.png" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">vue源码阅读-Object.defineProperty</div></div></a></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><div><a href="/2021/12/21/%E5%85%A8%E7%AD%89%E5%92%8C%E7%9B%B8%E7%AD%89%E4%BD%A0%E7%9C%9F%E7%9A%84%E4%BA%86%E8%A7%A3%E5%98%9B/" title="js相等和全等你真的了解嘛"><img class="cover" src="https://s2.loli.net/2021/12/21/BK1FH9zCGpfdvNU.png" alt="cover"><div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-21</div><div class="title">js相等和全等你真的了解嘛</div></div></a></div></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div class="vcomment" id="vcomment"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/avatar1.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">chuyuxuan</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">56</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">67</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Chuyuxuan0v0"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86"><span class="toc-number">1.</span> <span class="toc-text">Javascript操作符运算合集</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%9B%9B%E5%88%99%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.1.</span> <span class="toc-text">四则运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%A0%E6%B3%95"><span class="toc-number">1.1.1.</span> <span class="toc-text">+ 加法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%87%8F%E6%B3%95"><span class="toc-number">1.1.2.</span> <span class="toc-text">- 减法</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B9%98%E6%B3%95"><span class="toc-number">1.1.3.</span> <span class="toc-text">* 乘法</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97%E7%AC%A6"><span class="toc-number">1.2.</span> <span class="toc-text">逻辑运算符</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%9B%B8%E7%AD%89-%E6%9D%BE%E6%95%A3%E7%9B%B8%E7%AD%89"><span class="toc-number">1.2.1.</span> <span class="toc-text">&#x3D;&#x3D;相等(松散相等)</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%A6%82%E6%9E%9C%E6%93%8D%E4%BD%9C%E6%95%B0%E5%85%B7%E6%9C%89%E7%9B%B8%E5%90%8C%E7%9A%84%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">1.如果操作数具有相同的基本类型</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%A6%82%E6%9E%9C%E6%93%8D%E4%BD%9C%E6%95%B0%E5%9F%BA%E6%9C%AC%E7%B1%BB%E5%9E%8B%E4%B8%8D%E5%90%8C"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">2.如果操作数基本类型不同</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%A6%82%E6%9E%9C%E6%93%8D%E4%BD%9C%E6%95%B0%E6%9C%89%E5%BC%95%E7%94%A8%E7%B1%BB%E5%9E%8B"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">3.如果操作数有引用类型</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E9%80%BB%E8%BE%91%E9%9D%9E"><span class="toc-number">1.2.2.</span> <span class="toc-text">!逻辑非</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2024/03/26/Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86/" title="Javascript操作符运算合集"><img src="https://s21.ax1x.com/2024/03/26/pF5gcY4.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Javascript操作符运算合集"/></a><div class="content"><a class="title" href="/2024/03/26/Javascript%E6%93%8D%E4%BD%9C%E7%AC%A6%E8%BF%90%E7%AE%97%E5%90%88%E9%9B%86/" title="Javascript操作符运算合集">Javascript操作符运算合集</a><time datetime="2024-03-26T10:40:59.000Z" title="发表于 2024-03-26 18:40:59">2024-03-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty"><img src="https://s2.loli.net/2023/08/06/Np49USqBcGLwefH.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="vue源码阅读-Object.defineProperty"/></a><div class="content"><a class="title" href="/2023/08/06/20230806/" title="vue源码阅读-Object.defineProperty">vue源码阅读-Object.defineProperty</a><time datetime="2023-08-06T07:10:58.000Z" title="发表于 2023-08-06 15:10:58">2023-08-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG"><img src="https://s2.loli.net/2023/06/21/FouatOY6wW7sfI9.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="如何优雅的甩锅BUG"/></a><div class="content"><a class="title" href="/2023/06/21/202306210946/" title="如何优雅的甩锅BUG">如何优雅的甩锅BUG</a><time datetime="2023-06-21T01:46:59.000Z" title="发表于 2023-06-21 09:46:59">2023-06-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/03/06/11/" title="如何拿到选项的label">如何拿到选项的label</a><time datetime="2023-03-06T11:15:29.000Z" title="发表于 2023-03-06 19:15:29">2023-03-06</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网"><img src="https://s2.loli.net/2022/11/01/XurvGZ2QkBUIWmY.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="win设置同时链接内外网"/></a><div class="content"><a class="title" href="/2022/11/01/win%E8%AE%BE%E7%BD%AE%E5%90%8C%E6%97%B6%E9%93%BE%E6%8E%A5%E5%86%85%E5%A4%96%E7%BD%91/" title="win设置同时链接内外网">win设置同时链接内外网</a><time datetime="2022-11-01T04:03:29.000Z" title="发表于 2022-11-01 12:03:29">2022-11-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2024 By CHUYUXUAN</div><div class="framework-info"><span>Framework </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>Theme </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a><span class="footer-separator">|</span><span>Design By </span><a href="https://blog.chuyuxuan.top">CHUYUXUAN</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>function loadValine () {
+  function initValine () {
+    const valine = new Valine(Object.assign({
+      el: '#vcomment',
+      appId: '4VHYBgLfdjw6zhs1Ep46acMw-gzGzoHsz',
+      appKey: 't4eW4wzuDJuIU1McV0Ir9Dzq',
+      avatar: 'monsterid',
+      serverURLs: '',
+      emojiMaps: "",
+      path: window.location.pathname,
+      visitor: true
+    }, null))
+  }
+
+  if (typeof Valine === 'function') initValine() 
+  else getScript('https://cdn.jsdelivr.net/npm/valine/dist/Valine.min.js').then(initValine)
+}
+
+if ('Valine' === 'Valine' || !true) {
+  if (true) btf.loadComment(document.getElementById('vcomment'),loadValine)
+  else setTimeout(loadValine, 0)
+} else {
+  function loadOtherComment () {
+    loadValine()
+  }
+}</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
