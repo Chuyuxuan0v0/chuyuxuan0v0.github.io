@@ -1298,7 +1298,7 @@ template {
   --tab-button-active-bg: #fff;
   --card-bg: #fff;
   --sidebar-bg: #f6f8fa;
-  --btn-hover-color: #ff7242;
+  --btn-hover-color: #d85f52;
   --btn-color: #fff;
   --btn-bg: #d85f52;
   --text-bg-hover: rgba(216,95,82,0.7);
@@ -1312,7 +1312,7 @@ template {
   --toc-link-color: #666261;
   --card-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.05);
   --card-hover-box-shadow: 0 3px 8px 6px rgba(7,17,27,0.09);
-  --pseudo-hover: #ff7242;
+  --pseudo-hover: #d85f52;
   --headline-presudo: #a0a0a0;
   --scrollbar-color: #d85f52;
   --default-bg-color: #d85f52;
@@ -1402,7 +1402,7 @@ table td {
   vertical-align: middle;
 }
 *::selection {
-  background: #00c4b6;
+  background: #d85f52;
   color: #f7f7f7;
 }
 button {
@@ -2773,7 +2773,7 @@ h1.page-title + .tag-cloud-list {
   color: #d85f52;
 }
 #aside-content #card-toc .toc-content .toc-link.active {
-  background: #00c4b6;
+  background: #d85f52;
   color: #fff;
 }
 #aside-content .sticky_layout:only-child > :first-child {
@@ -3643,7 +3643,7 @@ h1.page-title + .tag-cloud-list {
   text-align: center;
 }
 #pagination .page-number.current {
-  background: #00c4b6;
+  background: #d85f52;
   color: var(--white);
 }
 #pagination .pagination-info {
@@ -4211,7 +4211,7 @@ h1.page-title + .tag-cloud-list {
 #waline-wrap {
   --waline-font-size: 1.1em;
   --waline-theme-color: #d85f52;
-  --waline-active-color: #ff7242;
+  --waline-active-color: #d85f52;
 }
 #waline-wrap .wl-comment-actions > button:not(last-child) {
   padding-right: 4px;
